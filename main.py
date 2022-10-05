@@ -7,4 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
+
+@app.route('/studentsubmit',methods= ['GET', 'POST'])
+def studentsubmit():
+    return render_template('studentsubmit.html')
+
 #testing staging
