@@ -12,4 +12,10 @@ def home():
 def studentsubmit():
     return render_template('studentsubmit.html')
 
+
+@app.route('/studentform', methods = ['GET','POST'])
+def studentform():
+    return render_template('studentform.html')
+
+
 #testing staging
