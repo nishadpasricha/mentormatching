@@ -10,12 +10,13 @@ def home():
 
 @app.route('/studentsubmit',methods= ['GET', 'POST'])
 def studentsubmit():
-    return render_template('studentsubmit.html')
+    return render_template('studentemailcheck.html')
 
 
 @app.route('/studentform', methods = ['GET','POST'])
 def studentform():
-    return render_template('studentform.html')
-
-
-#testing staging
+    if request.method == 'POST':
+        student_email=request.form
+        email=request.form.get("email")
+        print(email)
+    return render_template('studentform.html', user_info=student_email, email = email)

@@ -32,6 +32,26 @@
   color: white;
 }
 
+.container {
+  width: auto;
+  height: 500px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.studentemailform {
+    
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-color: black;
+    border-style: solid;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-radius: 10%;
+}
 </style>
 <script>
 
@@ -41,4 +61,12 @@
 <a href = "/" > <div class = "headerbanner">
 <p>RIT's Mentor Matching Service</p>
 </div></a>
-<p>EMAIL CHECK TEST</p>
+
+<div class = "container">
+  <div class = "studentemailform">
+    <p>CONFIRM YOUR EMAIL</p>
+    <form action = "/studentform" method = "POST">
+      <input type= "email" id="email" name="email">
+      <input type="submit">
+    </div>
+    </div>

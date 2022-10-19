@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<title>Home/Sign up for RIT's MentorMatching</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+    body {
+    background-color:#ffffff;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.headerbanner {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(112, 112, 112);
+  font-style: normal;
+  position: relative;
+  height: 6rem;
+  width: auto;
+  background-color: rgb(255, 111, 0);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 200px;
+}
+
+
+.container {
+  width: auto;
+  height: 500px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+
+
+<script>
+
+</script>
+
+<body>
+
+<div class="headerbanner">RIT MENTOR MATCHING SERVICE</div>
+
+<div class = "container">
+    <form>
+    <form action = "/studentconfirm" method = "POST">
+      <!---Name Collection-->
+      <label for="fname">First Name</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Last Name</label><br>
+      <input type="text" id="lname" name="lname"><br>
+      <!---Degree Selection-->
+      <p>Select Your Degree</p>
+      <label for="financedegree">Finance</label>
+      <input type="radio" id="financedegree" name="degree"><br>
+      <label for="accountingdegree">Accounting</label>
+      <input type="radio" id="accountingdegree" name="degree"><br>
+      <label for="s-hospitdegree">Hospitality and Tourism</label>
+      <input type="radio" id="s-hospitdegree" name="degree"><br>
+      <label for="s-globaldegree">Global Business Management</label>
+      <input type="radio" id="s-globaldegree" name="degree"><br>
+      <label for="misdegree">Management Information Systems</label>
+      <input type="radio" id="misdegree" name="degree"><br>
+      <label for= "s-supplychaindegree">Supply Chain Management</label>
+      <input type="radio" id="s-supplychaindegree" name="degree"><br>
+      <label for="s-marketing">Marketing</label>
+      <input type="radio" id="s-marketing" name ="degree"><br>
+      <label for="s-businessexploration">Business Exploration</label>
+      <input type="radio" id="s-businessexploration" name="degree"><br> 
+
+      <!---Hobby Selection-->
+      <label for="hobbies1">Hobby 1</label><br>
+      <select name="hobbies1" id="hobbies1"><br>
+          <option value="sports">Sports</option>
+          <option value="artdesign">Art/Design</option>
+          <option value ="communityservice">Community Service</option>
+          <option value ="reading">Reading</option>
+          <option value ="videogames">Video Games</option>
+          <option value ="music">Music</option>
+          <option value ="stocks">Stock/Finance</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="shopping">Shopping</option>
+          <option value="research">Research/News</option>
+          <option value="cooking">Coding/Programming</option>
+        </select><br>
+        <label for="hobbies2">Hobby 2</label><br>
+        <select name="hobbies2" id="hobbies2"><br>
+            <option value="sports">Sports</option>
+            <option value="artdesign">Art/Design</option>
+            <option value ="communityservice">Community Service</option>
+            <option value ="reading">Reading</option>
+            <option value ="videogames">Video Games</option>
+            <option value ="music">Music</option>
+            <option value ="stocks">Stock/Finance</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="shopping">Shopping</option>
+            <option value="research">Research/News</option>
+            <option value="cooking">Coding/Programming</option>
+        </select>
+        <br><br>
+        <label for="s-workexperience">Short Desc. of Work Experience</label><br>
+        <input type="text" id="s-workexperience" name="we"><br><br>
+        <label for="s-department">Which Department Interests You?</label><br>
+        <select name="s-department" id="department">
+          <option value="marketing">Marketing</option>
+          <option value ="finance">Finance</option>
+          <option value="operationsmanagement">Operations Management</option>
+          <option value="humanresources">Human Resources</option>
+          <option value="it">IT</option>
+          <option value="development">Development</option>
+          <option value="consulting">Consulting</option>
+          <option value="legal">Legal</option>
+          <option value="manufacturing">Manufacturing</option>
+          <option value="dis-scm">Distribution/Supply Chain</option>
+        </select><br><br>
+        <label for="s-interest">Please Select an Interest</label><br>
+        <select name="s-interest" id="s-interest">
+          <option value="healthcare">Healthcare</option>
+          <option value="technology">Technology</option>
+          <option value="construction">Construction/Real Estate</option>
+          <option value="retail">Retail</option>
+          <option value="insurance">Insurance</option>
+          <option value="transportation">Transportation</option>
+          <option value="finance-banking">Finance/Banking</option>
+          <option value="education">Education</option>
+          <option value="research">Research</option>
+        </select><br>
+        <label for="s-desire">What are you seeking mentorship on?</label><br>
+        <input type="text" id="s-desire" name="desire"><br><br>
+        <label for="s-graddate">What is your graduation year?</label><br>
+        <input type="text" id="s-graddate" name="graddate"><br><br>
+        <label for="s-location">Location Preference</label><br>
+        <select name="s-location">
+          <option value="campus">Meet on Campus</option>
+          <option value="remote">Meet Remotely</option>
+        </select><br>
+        <label for="s-linkedin">LinkedIn Account</label><br>
+        <input type="text" id="s-linkedin" name="linkedin"><br><br>
+        <input type="submit">
+        
+
+
+        
+    </form>
+</div>
+
+</body>
+
+
+
