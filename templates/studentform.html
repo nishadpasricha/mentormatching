@@ -55,7 +55,7 @@
 <div class="headerbanner">RIT MENTOR MATCHING SERVICE</div>
 
 <div class = "container">
-    <form>
+
     <form action = "/studentconfirm" method = "POST">
       <!---Name Collection-->
       <label for="fname">First Name</label><br>
@@ -143,17 +143,13 @@
         <label for="s-graddate">What is your graduation year?</label><br>
         <input type="text" id="s-graddate" name="graddate"><br><br>
         <label for="s-location">Location Preference</label><br>
-        <select name="s-location">
+        <select name="location" id="s-location">
           <option value="campus">Meet on Campus</option>
           <option value="remote">Meet Remotely</option>
         </select><br>
         <label for="s-linkedin">LinkedIn Account</label><br>
         <input type="text" id="s-linkedin" name="linkedin"><br><br>
-        <input type="submit">
-        
-
-
-        
+      <input type="submit">   
     </form>
 </div>
 
