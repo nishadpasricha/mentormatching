@@ -5,6 +5,6 @@ Left to do:
 1. Create Class for students
 2. Create / Copy Alumni Flow
 3. Make it pretty
-4. Connect DB
+4. init db (SQLAlchemy and initial sqllite testing with eventual postgres transferral)
 4.5 DB testing
-5. Figure out hosting (digital ocean)
+5. Figure out hosting (heroku)

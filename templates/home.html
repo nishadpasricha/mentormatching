@@ -60,12 +60,37 @@
     
 }
 
+.alumniselect {
+    
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-radius: 10%;
+    left: 24rem;
+    top: 5rem;
+    
+}
+
 .centertext {
     text-align: center;
     font-family: Montserrat;
     font-size: 16px;
     width: auto;
     padding: 75px;
+}
+
+.selectionwrapper {
+    width: auto;
+    height: 100%;
+    background: #ffffff;
+    color: #BDBDBD;
+    top: 10rem;
+
 }
 
 </style>
@@ -82,13 +107,22 @@
     alumni for a networking opportunity. 
     It is not required to engage in conversation with them!
 </div>
-<a href = "/studentsubmit"><div class = "studentselect">
-    <div class = "centertext">
+<div class = "selectionwrapper">
+    <a href = "/studentemalcheck"><div class = "studentselect">
+        <div class = "centertext">
         I'm a student looking to be matched with a mentor INSERT ARROW
+        </div>
     </div>
-</div>
-</a>
+    </a>
 
+
+    <a href = "/alumniemailcheck"><div class = "alumniselect">
+        <div class = "centertext">
+        I'm an Alumni open to mentor a student INSERT ARROW
+        </div>
+    </div>
+    </a>
+</div>
 </body>
 
 </html>
