@@ -59,9 +59,9 @@
     <form action = "/alumniconfirm" method = "POST">
       <!---Name Collection-->
       <label for="fname">First Name</label><br>
-      <input type="text" id="fname" name="fname"><br>
+      <input type="text" id="fname" name="fname" required><br>
       <label for="lname">Last Name</label><br>
-      <input type="text" id="lname" name="lname"><br>
+      <input type="text" id="lname" name="lname" required><br>
       <!---Degree Selection-->
       <p>Select Your Degree</p>
       <label for="a-financedegree">Finance</label>
@@ -83,7 +83,7 @@
 
       <!---Hobby Selection-->
       <label for="hobbies1">Hobby 1</label><br>
-      <select name="hobbies1" id="hobbies1"><br>
+      <select name="hobbies1" id="hobbies1" required><br>
           <option value="sports">Sports</option>
           <option value="artdesign">Art/Design</option>
           <option value ="communityservice">Community Service</option>
@@ -97,7 +97,7 @@
           <option value="cooking">Coding/Programming</option>
         </select><br>
         <label for="hobbies2">Hobby 2</label><br>
-        <select name="hobbies2" id="hobbies2"><br>
+        <select name="hobbies2" id="hobbies2" required><br>
             <option value="sports">Sports</option>
             <option value="artdesign">Art/Design</option>
             <option value ="communityservice">Community Service</option>
@@ -112,9 +112,9 @@
         </select>
         <br><br>
         <label for="a-workexperience">Short Desc. of Work Experience</label><br>
-        <input type="text" id="a-workexperience" name="we"><br><br>
+        <input type="text" id="a-workexperience" name="we" required><br><br>
         <label for="a-department">Which Department Do You Work In?</label><br>
-        <select name="a-department" id="department">
+        <select name="a-department" id="department" required>
           <option value="marketing">Marketing</option>
           <option value ="finance">Finance</option>
           <option value="operationsmanagement">Operations Management</option>
@@ -127,14 +127,14 @@
           <option value="dis-scm">Distribution/Supply Chain</option>
         </select><br><br>
         <label for="a-graddate">What was your graduation year?</label><br>
-        <input type="text" id="a-graddate" name="graddate"><br><br>
+        <input type="text" id="a-graddate" name="graddate" required><br><br>
         <label for="a-location">Location Preference</label><br>
-        <select name="location" id="a-location">
+        <select name="location" id="a-location" required>
           <option value="campus">Meet on Campus</option>
           <option value="remote">Meet Remotely</option>
         </select><br>
         <label for="a-linkedin">LinkedIn Account</label><br>
-        <input type="text" id="a-linkedin" name="linkedin"><br><br>
+        <input type="text" id="a-linkedin" name="linkedin" required><br><br>
       <input type="submit">   
     </form>
 </div>
