@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://bcglbxjgveomly:fe71e32c012342bcb9dee8b2b7691f36d473414981bc80cfbe2d8feaf722ad8c@ec2-54-165-184-219.compute-1.amazonaws.com:5432/dcn9njuu2v97e7'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bcglbxjgveomly:fe71e32c012342bcb9dee8b2b7691f36d473414981bc80cfbe2d8feaf722ad8c@ec2-54-165-184-219.compute-1.amazonaws.com:5432/dcn9njuu2v97e7'
 
 
 app.config['SECRET_KEY'] = "my secret key"
