@@ -1,7 +1,0 @@
-Left to do:
-
-Change radio form capture to drop down (fix submission)
-
-Change location gathering to 1 or 0 depending 
-
-
