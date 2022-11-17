@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-#add DB
+#add DB 
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
