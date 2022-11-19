@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 #add DB 
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db' <-- Local DB
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bcglbxjgveomly:fe71e32c012342bcb9dee8b2b7691f36d473414981bc80cfbe2d8feaf722ad8c@ec2-54-165-184-219.compute-1.amazonaws.com:5432/dcn9njuu2v97e7'
 
@@ -67,11 +67,9 @@ class Alumni(db.Model):
 def home():
     return render_template('home.html')
 
-
 @app.route('/studentemailcheck',methods= ['GET', 'POST'])
 def studentsubmit():
     return render_template('studentemailcheck.html')
-
 
 @app.route('/studentform', methods = ['GET','POST'])
 def studentform():
@@ -136,13 +134,9 @@ def alumniconfirm():
         a_graddate = request.form.get("graddate")
         a_location = request.form.get("location")
         a_linkedin = request.form.get("linkedin")
-
         alumni = Alumni(email=a_email,fname=a_fname,lname=a_lname,degree=a_degree,hobby1=a_hobby1,hobby2=a_hobby2,workexp=a_workexp,dept=a_dept,graddate=a_graddate,location=a_location,linkedin=a_linkedin)
         db.session.add(alumni)
         db.session.commit()
-
-
         print(a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin)
-
     return render_template('alumniconfirm.html')
 

@@ -15,6 +15,7 @@
     position: block;
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: Montserrat;
 
 }
 
@@ -31,17 +32,55 @@
   font-family: Montserrat;
   font-size: 30px;
   color: white;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
+}
+
+.heading1 {
+    width: auto;
+    height: 46px;
+    position: relative;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: rgb(255, 111, 0);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: rgb(255, 141, 55);
+}
+
+/* Add a background color and some padding around the form */
 .container {
-  width: auto;
-  height: 500px;
-  margin: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 </style>
 
@@ -54,14 +93,18 @@
 
 <div class="headerbanner">RIT MENTOR MATCHING SERVICE</div>
 
+<div class = "heading1"> <span style="font-weight: bold;">We've Verified Your Email!</span><br>
+  Please fill out this form to be placed in our program as a Mentor. 
+  </div>
+
 <div class = "container">
 
     <form action = "/alumniconfirm" method = "POST">
       <!---Name Collection-->
       <label for="fname">First Name</label><br>
-      <input type="text" id="fname" name="fname" required><br>
+      <input type="text" id="fname" name="fname" required placeholder="Jane"><br>
       <label for="lname">Last Name</label><br>
-      <input type="text" id="lname" name="lname" required><br>
+      <input type="text" id="lname" name="lname" required placeholder="Doe"><br>
       <!---Degree Selection-->
       <label for="degree">Degree</label><br>
       <select name="degree">
@@ -106,8 +149,8 @@
             <option value="cooking">Coding/Programming</option>
         </select>
         <br><br>
-        <label for="a-workexperience">Short Desc. of Work Experience</label><br>
-        <input type="text" id="a-workexperience" name="we" required><br><br>
+        <label for="a-workexperience">Current Postion and Company</label><br>
+        <input type="text" id="a-workexperience" name="we" required placeholder="Where do you currently work?"><br><br>
         <label for="a-department">Which Department Do You Work In?</label><br>
         <select name="a-department" id="department" required>
           <option value="marketing">Marketing</option>
@@ -122,16 +165,15 @@
           <option value="dis-scm">Distribution/Supply Chain</option>
         </select><br><br>
         <label for="a-graddate">What was your graduation year?</label><br>
-        <input type="text" id="a-graddate" name="graddate" required><br><br>
+        <input type="text" id="a-graddate" name="graddate" required placeholder="Format: YYYY"><br><br>
         <label for="a-location">Location Preference</label><br>
         <select name="location" id="a-location" required>
-          <option value="campus">Meet on Campus</option>
-          <option value="remote">Meet Remotely</option>
+          <option value="0">Meet on Campus</option>
+          <option value="1">Meet Remotely</option>
         </select><br>
         <label for="a-linkedin">LinkedIn Account</label><br>
-        <input type="text" id="a-linkedin" name="linkedin" required><br><br>
+        <input type="text" id="a-linkedin" name="linkedin" required placeholder="www.linkedin.com/in/USER"><br><br>
       <input type="submit">   
     </form>
 </div>
-
 </body>
