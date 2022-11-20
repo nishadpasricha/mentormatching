@@ -97,7 +97,7 @@ def studentconfirm():
         s_graddate = request.form.get("graddate")
         s_location = request.form.get("location")
         s_linkedin = request.form.get("linkedin")
-        student = Students(email = s_email, lname=s_lname,fname=s_fname,degree=s_degree,hobby1=s_hobby1,hobby2=s_hobby2,workexp=s_workexp,dept=s_dept,interest=s_interest,desire=s_desire,graddate = s_graddate, location=s_location,linkedin=s_linkedin)
+        student = Students(email=s_email, lname=s_lname,fname=s_fname,degree=s_degree,hobby1=s_hobby1,hobby2=s_hobby2,workexp=s_workexp,dept=s_dept,interest=s_interest,desire=s_desire,graddate = s_graddate, location=s_location,linkedin=s_linkedin)
 
         db.session.add(student)
         db.session.commit()
@@ -138,5 +138,5 @@ def alumniconfirm():
         db.session.add(alumni)
         db.session.commit()
         print(a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin)
-    return render_template('alumniconfirm.html')
+    return render_template('alumniconfirm.html', a_fname = a_fname)
 
