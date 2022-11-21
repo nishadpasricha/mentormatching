@@ -78,7 +78,7 @@ def studentform():
         global s_email
         s_email = request.form.get("email")
         print(s_email)
-    return render_template('studentform.html'), s_email
+    return render_template('studentform.html')
 
 @app.route('/studentconfirm', methods = ['GET','POST'])
 def studentconfirm(s_email):
