@@ -78,10 +78,10 @@ def studentform():
         global s_email
         s_email = request.form.get("email")
         print(s_email)
-    return render_template('studentform.html')
+    return render_template('studentform.html'), s_email
 
 @app.route('/studentconfirm', methods = ['GET','POST'])
-def studentconfirm():
+def studentconfirm(s_email):
     if request.method == 'POST':
         global s_fname,s_lname,s_degree,s_hobby1,s_hobby2,s_workexp,s_dept,s_interest,s_desire,s_graddate,s_location,s_linkedin
         request.form
@@ -97,6 +97,7 @@ def studentconfirm():
         s_graddate = request.form.get("graddate")
         s_location = request.form.get("location")
         s_linkedin = request.form.get("linkedin")
+        s_email=s_email
         student = Students(email=s_email, lname=s_lname,fname=s_fname,degree=s_degree,hobby1=s_hobby1,hobby2=s_hobby2,workexp=s_workexp,dept=s_dept,interest=s_interest,desire=s_desire,graddate = s_graddate, location=s_location,linkedin=s_linkedin)
 
         db.session.add(student)
@@ -117,10 +118,10 @@ def alumniform():
         global a_email
         a_email = request.form.get("email")
         print(a_email)
-    return render_template('alumniform.html')
+    return render_template('alumniform.html'), a_email
 
 @app.route('/alumniconfirm', methods = ['GET','POST'])
-def alumniconfirm():
+def alumniconfirm(a_email):
     if request.method == 'POST':
         request.form
         global a_fname,a_lname,a_degree,a_hobby1,a_hobby2, a_workexp, a_dept, a_graddate, a_location,a_linkedin
@@ -134,6 +135,7 @@ def alumniconfirm():
         a_graddate = request.form.get("graddate")
         a_location = request.form.get("location")
         a_linkedin = request.form.get("linkedin")
+        a_email=a_email
         alumni = Alumni(email=a_email,fname=a_fname,lname=a_lname,degree=a_degree,hobby1=a_hobby1,hobby2=a_hobby2,workexp=a_workexp,dept=a_dept,graddate=a_graddate,location=a_location,linkedin=a_linkedin)
         db.session.add(alumni)
         db.session.commit()
