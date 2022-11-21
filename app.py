@@ -75,9 +75,7 @@ def studentsubmit():
 def studentform():
     if request.method == 'POST':
         request.form
-        global s_email
-        s_email = request.form.get("email")
-        print(s_email)
+        session['s_email'] = request.form.get("email")
     return render_template('studentform.html')
 
 @app.route('/studentconfirm', methods = ['GET','POST'])
@@ -97,12 +95,10 @@ def studentconfirm():
         s_graddate = request.form.get("graddate")
         s_location = request.form.get("location")
         s_linkedin = request.form.get("linkedin")
+        s_email = session.get('s_email',None)
         student = Students(email=s_email, lname=s_lname,fname=s_fname,degree=s_degree,hobby1=s_hobby1,hobby2=s_hobby2,workexp=s_workexp,dept=s_dept,interest=s_interest,desire=s_desire,graddate = s_graddate, location=s_location,linkedin=s_linkedin)
-
         db.session.add(student)
         db.session.commit()
-        
-
         print(s_email, s_lname, s_fname,s_degree,s_hobby1,s_hobby2,s_workexp,s_dept,s_interest,s_desire,s_graddate,s_location,s_linkedin)
     return render_template('studentconfirm.html', s_fname = s_fname)
 
@@ -114,9 +110,7 @@ def alumniemailcheck():
 def alumniform():
     if request.method == 'POST':
         request.form
-        
         session['a_email'] = request.form.get("email")
-        
     return render_template('alumniform.html')
 
 @app.route('/alumniconfirm', methods = ['GET','POST'])
