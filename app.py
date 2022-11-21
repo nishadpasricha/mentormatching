@@ -81,7 +81,7 @@ def studentform():
     return render_template('studentform.html')
 
 @app.route('/studentconfirm', methods = ['GET','POST'])
-def studentconfirm(s_email):
+def studentconfirm():
     if request.method == 'POST':
         global s_fname,s_lname,s_degree,s_hobby1,s_hobby2,s_workexp,s_dept,s_interest,s_desire,s_graddate,s_location,s_linkedin
         request.form
@@ -104,7 +104,7 @@ def studentconfirm(s_email):
         db.session.commit()
         
 
-        print(s_lname, s_fname,s_degree,s_hobby1,s_hobby2,s_workexp,s_dept,s_interest,s_desire,s_graddate,s_location,s_linkedin)
+        print(s_email, s_lname, s_fname,s_degree,s_hobby1,s_hobby2,s_workexp,s_dept,s_interest,s_desire,s_graddate,s_location,s_linkedin)
     return render_template('studentconfirm.html', s_fname = s_fname)
 
 @app.route('/alumniemailcheck', methods = ['GET','POST'])
@@ -121,7 +121,7 @@ def alumniform():
     return render_template('alumniform.html')
 
 @app.route('/alumniconfirm', methods = ['GET','POST'])
-def alumniconfirm(a_email):
+def alumniconfirm():
     if request.method == 'POST':
         request.form
         global a_fname,a_lname,a_degree,a_hobby1,a_hobby2, a_workexp, a_dept, a_graddate, a_location,a_linkedin
@@ -139,6 +139,6 @@ def alumniconfirm(a_email):
         alumni = Alumni(email=a_email,fname=a_fname,lname=a_lname,degree=a_degree,hobby1=a_hobby1,hobby2=a_hobby2,workexp=a_workexp,dept=a_dept,graddate=a_graddate,location=a_location,linkedin=a_linkedin)
         db.session.add(alumni)
         db.session.commit()
-        print(a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin)
+        print(a_email, a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin)
     return render_template('alumniconfirm.html', a_fname = a_fname)
 
