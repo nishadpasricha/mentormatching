@@ -118,7 +118,7 @@ def alumniform():
         global a_email
         a_email = request.form.get("email")
         print(a_email)
-    return render_template('alumniform.html'), a_email
+    return render_template('alumniform.html')
 
 @app.route('/alumniconfirm', methods = ['GET','POST'])
 def alumniconfirm(a_email):
