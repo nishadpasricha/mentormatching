@@ -53,10 +53,11 @@
     border-style: solid;
     display: inline-block;
     background-color: #ffffff;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 10%;
-    left: 12rem;
-    top: 5rem;
+    right: 4rem;
+    overflow: hidden;
+
     
 }
 
@@ -69,10 +70,9 @@
     border-style: solid;
     display: inline-block;
     background-color: #ffffff;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 10%;
-    left: 24rem;
-    top: 5rem;
+    overflow: hidden;
     
 }
 
@@ -89,9 +89,24 @@
     height: 100%;
     background: #ffffff;
     color: #BDBDBD;
-    top: 10rem;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
 
 }
+
+.imagewrapper {
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+
+
 
 </style>
 <script>
@@ -102,24 +117,25 @@
 <div class = "headerbanner">
 <p>RIT's Mentor Matching Service</p>
 </div>
-<div class = "heading1"> Sign up to enroll in our mentor matching program!
+<div class = "heading1"> Sign up to enroll in our mentor matching program!<br>
     At the beginning of each semester RIT will pair students with a professional 
-    alumni for a networking opportunity. 
-    It is not required to engage in conversation with them!
+    alumni for a networking opportunity. <br><br>
+    <span style="font-style: italic">To get started, select if you are a Student or an Alumni:</span>
 </div>
 <div class = "selectionwrapper">
     <a href = "/studentemailcheck"><div class = "studentselect">
         <div class = "centertext">
-        I'm a student looking to be matched with a mentor INSERT ARROW
+        <span style="font-weight: bold;">STUDENT</span>
+        
         </div>
+        <div class="imagewrapper"><img src="/static/student.png"></div>
     </div>
     </a>
-
-
     <a href = "/alumniemailcheck"><div class = "alumniselect">
         <div class = "centertext">
-        I'm an Alumni open to mentor a student INSERT ARROW
+        <span style="font-weight: bold;">ALUMNI</span>
         </div>
+        <div class="imagewrapper"><img src="/static/alumni.png"></div>
     </div>
     </a>
 </div>
