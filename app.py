@@ -54,6 +54,7 @@ class Alumni(db.Model):
     hobby1 = db.Column(db.String(200),nullable=False)
     hobby2 = db.Column(db.String(200),nullable=False)
     workexp = db.Column(db.String(200),nullable=False)
+    industry = db.Column(db.String(200),nullable=False)
     dept = db.Column(db.String(200),nullable=False)
     graddate = db.Column(db.Integer)
     location = db.Column(db.String(200))
@@ -117,7 +118,7 @@ def alumniform():
 def alumniconfirm():
     if request.method == 'POST':
         request.form
-        global a_fname,a_lname,a_degree,a_hobby1,a_hobby2, a_workexp, a_dept, a_graddate, a_location,a_linkedin
+        global a_fname,a_lname,a_degree,a_hobby1,a_hobby2, a_workexp, a_dept, a_graddate, a_location,a_linkedin,a_industry
         a_fname = request.form.get("fname")
         a_lname = request.form.get("lname")
         a_degree = request.form.get("degree")
@@ -128,10 +129,11 @@ def alumniconfirm():
         a_graddate = request.form.get("graddate")
         a_location = request.form.get("location")
         a_linkedin = request.form.get("linkedin")
+        a_industry = request.form.get("a-industry")
         a_email = session.get('a_email',None)
-        alumni = Alumni(email=a_email,fname=a_fname,lname=a_lname,degree=a_degree,hobby1=a_hobby1,hobby2=a_hobby2,workexp=a_workexp,dept=a_dept,graddate=a_graddate,location=a_location,linkedin=a_linkedin)
+        alumni = Alumni(email=a_email,industry=a_industry,fname=a_fname,lname=a_lname,degree=a_degree,hobby1=a_hobby1,hobby2=a_hobby2,workexp=a_workexp,dept=a_dept,graddate=a_graddate,location=a_location,linkedin=a_linkedin)
         db.session.add(alumni)
         db.session.commit()
-        print( a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin)
+        print( a_fname, a_lname, a_degree, a_hobby1,a_hobby2,a_workexp, a_dept,a_graddate, a_location,a_linkedin,a_industry)
     return render_template('alumniconfirm.html', a_fname = a_fname)
 
